@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  weather-app:
+    container_name: weather-app
+    build: .
+    pull_policy: always
+    ports:
+      - "8080:8080"

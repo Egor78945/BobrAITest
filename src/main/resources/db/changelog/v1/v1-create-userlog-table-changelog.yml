@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: v1-1
+      author: egor
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            tableExists:
+              tableName: userlogs
+      changes:
+        - createTable:
+            tableName: userlogs
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    unique: true
+                    nullable: false
+                  autoIncrement: true
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: command
+                  type: varchar(500)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: answer
+                  type: varchar(500)
+                  constraints:
+                    nullable: false

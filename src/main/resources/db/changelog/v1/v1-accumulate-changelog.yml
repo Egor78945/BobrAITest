@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: v1-create-userlog-table-changelog.yml
+      relativeToChangelogFile: true
+

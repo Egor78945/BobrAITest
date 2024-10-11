@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: BobrAIWeatherBot
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://postgres:5432/weather
+    username: test
+    password: test
+
+  jpa:
+    database: postgresql
+    show-sql: true
+
+  liquibase:
+    change-log: db/changelog/main/main-changelog.yml
+
+bot:
+  name: BobrWeatherBot
+  token: 7577272056:AAEVmC2gflD49jC6MjaiSc56SoPQjZj3lvA
+
+weather:
+  uri: https://api.openweathermap.org/data/2.5/weather
+  token: 375503d1cb8283ef534d1941f9bd901d
+
+server:
+  port: 8080
